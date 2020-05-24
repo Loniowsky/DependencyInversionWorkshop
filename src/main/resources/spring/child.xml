@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="commonString" class="java.lang.String">
+        <constructor-arg value="commonString-child"/>
+    </bean>
+
+    <bean id="consumer1" class="examples.example7.StringConsumer">
+        <constructor-arg ref="commonString"/>
+    </bean>
+
+    <bean id="consumer2" class="examples.example7.StringConsumer">
+        <constructor-arg>
+            <ref parent="commonString"/>
+        </constructor-arg>
+    </bean>
+
+    <bean id="consumer3" class="examples.example7.StringConsumer">
+        <constructor-arg ref="parentString"/>
+    </bean>
+
+</beans>
