@@ -3,13 +3,7 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="provider" class="examples.example1_2.HelloWorldMessageProvider"/>
-    <bean id="renderer" class="examples.example1_2.SystemErrMessageRenderer" />
-
+    <bean id="prototype" scope="prototype" class="examples.example8.Counter"/>
+    <bean id="singleton" class="examples.example8.Counter"/>
 
 </beans>
-
-
-
-
-
