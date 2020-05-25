@@ -4,6 +4,6 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
     <bean id="prototype" scope="prototype" class="examples.example8.Counter"/>
-    <bean id="singleton" class="examples.example8.Counter"/>
+    <bean id="singleton" scope="singleton" class="examples.example8.Counter"/>
 
 </beans>
