@@ -3,4 +3,12 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
+    <bean id="methodReplacer" class="extras.method_replacement.ToStringReplacer"/>
+
+    <bean id="notReplaced" class="extras.method_replacement.Target"/>
+
+    <bean id="replaced" class="extras.method_replacement.Target">
+        <replaced-method name="toString" replacer="methodReplacer"/>
+    </bean>
+
 </beans>

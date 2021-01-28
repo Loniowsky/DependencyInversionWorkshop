@@ -1,4 +1,8 @@
 package homework;
 
-public class LaserPrinter {
+public class LaserPrinter implements Printer {
+    @Override
+    public String toString() {
+        return "LaserPrinter";
+    }
 }

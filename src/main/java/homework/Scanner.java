@@ -1,4 +1,3 @@
 package homework;
 
-public interface Scanner {
-}
+public interface Scanner { }
